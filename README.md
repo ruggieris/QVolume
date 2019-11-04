@@ -1,4 +1,4 @@
-# QVolume: Estimating the Total Volume of Queries to a Search Engine
+# QVolume: Total Volume of Queries to a Search Engine
 **Fabrizio Lillo**, Department  of  Mathematics,  University  of  Bologna, fabrizio.lillo@unibo.it  
 **Salvatore Ruggieri**, Department of Computer Science, University of Pisa, Italy, salvatore.ruggieri@unipi.it
 
