@@ -47,7 +47,7 @@ sample_geom_slow = function(n, N) {
 }
 
 #' sample of n distinct index positions up to N
-sample_geom = function(n, N) {
+sample_geom_old = function(n, N) {
   sample = c()
   i = 0
   base = 1
@@ -64,6 +64,12 @@ sample_geom = function(n, N) {
   }
   #cat('niter=', i, '\n')
   sample[1:n]
+}
+
+#' sample of n distinct index positions up to N with geom(0.001) probability
+sample_geom = function(n, N) {
+  prob = dgeom(0:(N-1),1/1000)
+  return( sample(1:N, n, prob=prob) )
 }
 
 #' VGAM::zeta(s, shift=N+1) requires s >= 1
@@ -257,12 +263,14 @@ error.V = function(V, c, b, dc, db, V_N)
 }
 
 #' Zipf's law fitting plot
-zipf.plot = function(y, main=NULL, ylim=NULL, parameters=NULL, to=Inf) {
+zipf.plot = function(y, main=NULL, ylim=NULL, parameters=NULL, to=Inf, samplepos=NULL) {
   par(mar=c(4,4,1.2,1))
+  if(is.null(samplepos))
+    samplepos = 1:length(y)
   if(!is.null(ylim))
-    plot(y, log="xy", ylim=ylim, xlab="", ylab="", las=1, xaxt="n", yaxt="n")
+    plot(samplepos, y[samplepos], log="xy", ylim=ylim, xlab="", ylab="", las=1, xaxt="n", yaxt="n")
   else
-    plot(y, log="xy", xlab="", ylab="", las=1, xaxt="n", yaxt="n")
+    plot(samplepos, y[samplepos], log="xy", xlab="", ylab="", las=1, xaxt="n", yaxt="n")
   eaxis(1, n.axp=1)
   eaxis(2, n.axp=1)
   mtext(text = "rank", side = 1, line = 2, font=2)
