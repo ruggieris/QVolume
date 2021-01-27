@@ -8,4 +8,4 @@ QVolume is a collection of R functions to estimate the total number of searches 
 
 [1] F. Lillo, S. Ruggieri. [Estimating the Total Volume of Queries to Google](http://pages.di.unipi.it/ruggieri/Papers/www2019.pdf). 28th World Wide Web Conference on World Wide Web (WebConf 2019) : 1051-1060. ACM, May 2019.
 
-[2] F. Lillo, S. Ruggieri. [Estimating the Total Volume of Queries to a Search Engine](http://pages.di.unipi.it/ruggieri/Papers/queryvolume.pdf). IEEE Transactions on Knowledge and Data Engineering. To appear, 2021. DOI: 10.1109/TKDE.2021.3054668.
+[2] F. Lillo, S. Ruggieri. [Estimating the Total Volume of Queries to a Search Engine](https://arxiv.org/abs/2101.09807). IEEE Transactions on Knowledge and Data Engineering. To appear, 2021. DOI: 10.1109/TKDE.2021.3054668.
